@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Student Registration Portal</h1>
+        <p>Students can register and manage their information in a single, easy process.</p>
+    </header>
+
+    <main id="main-content">
+        <section id="form-section">
+            <h2>Register a New Student</h2>
+            <form id="student-form">
+                <div class="input-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" name="studentName" pattern="[^\d]*"
+                        title="Only characters allowed" placeholder="Enter Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" name="studentId" pattern="\d+" title="Please enter only digits"
+                        placeholder="Enter Your Student ID">
+
+                </div>
+                <div class="input-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" title="Please enter email format"
+                        placeholder="Enter Your E-mail" required>
+                </div>
+                <div class="input-group">
+                    <label for="contact">Contact No:</label>
+                    <input type="text" id="contact" name="contact" required pattern="\d{10}"
+                        title="Please enter 10 digits" placeholder="Enter Your Mobile No.">
+                </div>
+                <button type="submit" class="btn">Confirm Registration</button>
+            </form>
+        </section>
+
+        <section id="display-section">
+            <h2>Registered Students</h2>
+            <table id="student-table">
+                <thead>
+                    <tr>
+                        <th style="width: 9%;">Student Name</th>
+                        <th style="width: 7%;">Student ID</th>
+                        <th style="width: 9%;">Email ID</th>
+                        <th style="width: 7%;">Contact No</th>
+                        <th style="width: 16%;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body">
+                    <!-- Student records will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
